@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>売場 座席管理</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin:0; background:#f7f7f7; }
+    header { padding:12px; text-align:center; font-weight:bold; background:#fff; }
+    #count { margin:8px 0; text-align:center; }
+    #map { position: relative; max-width: 420px; margin: 0 auto; background:#fff; }
+    .seat {
+      position: absolute;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      color: #fff; display:flex; align-items:center; justify-content:center;
+      font-weight:bold; user-select:none;
+    }
+    .free { background:#2ecc71; }
+    .used { background:#e74c3c; }
+    button { display:block; margin:12px auto; padding:10px 16px; border:none; border-radius:8px; }
+  </style>
+</head>
+<body>
+  <header>売場 座席管理</header>
+  <div id="count">着席数: 0 / 14</div>
+  <div id="map">
+    <img src="layout.png" style="width:100%; display:block;" />
+    <!-- 座席ボタンはJSで生成 -->
+  </div>
+  <button onclick="resetAll()">全席リセット</button>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
